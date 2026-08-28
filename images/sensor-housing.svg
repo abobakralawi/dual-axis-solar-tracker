@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 370" role="img" aria-label="How the sensor housing works. Left, from above: the cross-shaped housing holds one light sensor facing each compass direction, with a raised wall splitting each opposing pair. Middle, off the sun: the wall casts a shadow over one sensor of a pair, so it reads low while its partner reads high, and the firmware drives that axis toward the brighter sensor. Right, aligned: with the sun square on, both sensors of the pair read the same and the axis holds position.">
+  <style>
+    text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+    .p{fill:#f6f8fa;stroke:#59636e;stroke-width:1.5}
+    .sens{fill:#e6edf5;stroke:#59636e;stroke-width:1.5}
+    .dim{fill:#9aa5b1;stroke:#59636e;stroke-width:1.5}
+    .wall{fill:#d0d7de;stroke:#59636e;stroke-width:1.5}
+    .base{fill:none;stroke:#59636e;stroke-width:2}
+    .g{fill:none;stroke:#59636e;stroke-width:1.5;stroke-dasharray:5 4}
+    .ray{stroke:#d29922;stroke-width:1.8;opacity:.9;stroke-linecap:round}
+    .sun{fill:#f2cc60;stroke:#d29922;stroke-width:1}
+    .ax{fill:none;stroke:#bc4c00;stroke-width:2.5}
+    .t{fill:#1f2328;font-size:13px}
+    .lab{fill:#1f2328;font-size:13px;font-weight:600}
+    .ts{fill:#59636e;font-size:11px}
+    .ah{fill:#bc4c00}
+    @media (prefers-color-scheme:dark){
+      .p{fill:#161b22;stroke:#7d8590}
+      .sens{fill:#22303f;stroke:#7d8590}
+      .dim{fill:#3a424c;stroke:#7d8590}
+      .wall{fill:#30363d;stroke:#7d8590}
+      .base{stroke:#7d8590}
+      .g{stroke:#7d8590}
+      .ray{stroke:#e3b341}
+      .sun{fill:#e3b341;stroke:#d29922}
+      .ax{stroke:#e8873c}
+      .t{fill:#e6edf3}
+      .lab{fill:#e6edf3}
+      .ts{fill:#9198a1}
+      .ah{fill:#e8873c}
+    }
+  </style>
+  <defs>
+    <marker id="shh" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah"/></marker>
+    <symbol id="sun2" viewBox="-16 -16 32 32">
+      <circle class="sun" cx="0" cy="0" r="8"/>
+      <g class="ray">
+        <line x1="0" y1="-11" x2="0" y2="-15"/>
+        <line x1="0" y1="11" x2="0" y2="15"/>
+        <line x1="-11" y1="0" x2="-15" y2="0"/>
+        <line x1="11" y1="0" x2="15" y2="0"/>
+        <line x1="-8" y1="-8" x2="-11" y2="-11"/>
+        <line x1="8" y1="8" x2="11" y2="11"/>
+        <line x1="8" y1="-8" x2="11" y2="-11"/>
+        <line x1="-8" y1="8" x2="-11" y2="11"/>
+      </g>
+    </symbol>
+  </defs>
+
+  <!-- Column A: housing from above -->
+  <text class="lab" x="135" y="30" text-anchor="middle">Housing from above</text>
+  <rect class="p" x="55" y="150" width="170" height="34" rx="3"/>
+  <rect class="p" x="123" y="95" width="34" height="150" rx="3"/>
+  <rect class="sens" x="130" y="99" width="20" height="20"/>
+  <rect class="sens" x="130" y="221" width="20" height="20"/>
+  <rect class="sens" x="199" y="157" width="20" height="20"/>
+  <rect class="sens" x="61" y="157" width="20" height="20"/>
+  <rect class="wall" x="132" y="163" width="16" height="16"/>
+  <text class="ts" x="140" y="90" text-anchor="middle">N</text>
+  <text class="ts" x="140" y="258" text-anchor="middle">S</text>
+  <text class="ts" x="230" y="172">E</text>
+  <text class="ts" x="50" y="172" text-anchor="end">W</text>
+  <line class="g" x1="138" y1="178" x2="96" y2="214"/>
+  <text class="ts" x="88" y="221" text-anchor="end">raised</text>
+  <text class="ts" x="88" y="235" text-anchor="end">centre wall</text>
+  <text class="ts" x="135" y="316" text-anchor="middle">One sensor faces each direction.</text>
+  <text class="ts" x="135" y="332" text-anchor="middle">A wall splits each opposing pair.</text>
+
+  <line class="g" x1="282" y1="42" x2="282" y2="300"/>
+
+  <!-- Column B: off the sun -->
+  <text class="lab" x="430" y="30" text-anchor="middle">Off the sun</text>
+  <line class="base" x1="318" y1="224" x2="556" y2="224"/>
+  <rect class="wall" x="424" y="130" width="12" height="94"/>
+  <text class="ts" x="430" y="122" text-anchor="middle">wall</text>
+  <rect class="dim" x="350" y="208" width="30" height="16"/>
+  <rect class="sens" x="470" y="208" width="30" height="16"/>
+  <use href="#sun2" x="500" y="46" width="32" height="32"/>
+  <line class="ray" x1="522" y1="82" x2="486" y2="206"/>
+  <line class="ray" x1="536" y1="80" x2="498" y2="206"/>
+  <line class="ray" x1="506" y1="78" x2="437" y2="140"/>
+  <line class="ray" x1="492" y1="86" x2="437" y2="158"/>
+  <text class="ts" x="365" y="248" text-anchor="middle">shaded</text>
+  <text class="ts" x="365" y="262" text-anchor="middle">reads low</text>
+  <text class="ts" x="485" y="248" text-anchor="middle">lit</text>
+  <text class="ts" x="485" y="262" text-anchor="middle">reads high</text>
+  <path class="ax" marker-end="url(#shh)" d="M398 292 L470 292"/>
+  <text class="ts" x="434" y="285" text-anchor="middle">drive toward the brighter sensor</text>
+  <text class="ts" x="430" y="332" text-anchor="middle">The wall shades one sensor of the pair.</text>
+
+  <line class="g" x1="576" y1="42" x2="576" y2="300"/>
+
+  <!-- Column C: aligned -->
+  <text class="lab" x="720" y="30" text-anchor="middle">Aligned</text>
+  <line class="base" x1="610" y1="224" x2="840" y2="224"/>
+  <rect class="wall" x="714" y="130" width="12" height="94"/>
+  <rect class="sens" x="644" y="208" width="30" height="16"/>
+  <rect class="sens" x="766" y="208" width="30" height="16"/>
+  <use href="#sun2" x="704" y="40" width="32" height="32"/>
+  <line class="ray" x1="712" y1="76" x2="662" y2="206"/>
+  <line class="ray" x1="700" y1="76" x2="676" y2="206"/>
+  <line class="ray" x1="728" y1="76" x2="778" y2="206"/>
+  <line class="ray" x1="740" y1="76" x2="764" y2="206"/>
+  <text class="ts" x="659" y="248" text-anchor="middle">equal</text>
+  <text class="ts" x="781" y="248" text-anchor="middle">equal</text>
+  <text class="ts" x="720" y="285" text-anchor="middle">readings match, axis holds</text>
+  <text class="ts" x="720" y="332" text-anchor="middle">Sun square on, no shadow across the pair.</text>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330" role="img" aria-label="How one actuator reverses direction. Two relay channels each connect one motor terminal to either the plus 12 volt rail or ground. Relay 1 sets motor terminal A, Relay 2 sets terminal B. Relay 1 energised and Relay 2 off puts A at plus 12 volts and B at ground, so the actuator extends. The opposite pattern retracts it. Both relays in the same state leaves the actuator stopped.">
+  <style>
+    text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+    .p{fill:#f6f8fa;stroke:#59636e;stroke-width:1.5}
+    .t{fill:#1f2328;font-size:12.5px}
+    .ts{fill:#59636e;font-size:11px}
+    .w{fill:none;stroke:#59636e;stroke-width:1.6}
+    .rail{fill:none;stroke:#bc4c00;stroke-width:2.5}
+    .sig{fill:none;stroke:#59636e;stroke-width:1.6;stroke-dasharray:5 4}
+    .ah{fill:#59636e}
+    .node{fill:#59636e}
+    @media (prefers-color-scheme:dark){
+      .p{fill:#161b22;stroke:#7d8590}
+      .t{fill:#e6edf3}
+      .ts{fill:#9198a1}
+      .w{stroke:#7d8590}
+      .rail{stroke:#e8873c}
+      .sig{stroke:#7d8590}
+      .ah{fill:#7d8590}
+      .node{fill:#7d8590}
+    }
+  </style>
+  <defs>
+    <marker id="s2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah"/></marker>
+  </defs>
+
+  <line class="rail" x1="90" y1="58" x2="540" y2="58"/>
+  <text class="t" x="84" y="62" text-anchor="end">+12 V</text>
+  <line class="rail" x1="90" y1="238" x2="540" y2="238"/>
+  <text class="t" x="84" y="242" text-anchor="end">GND</text>
+
+  <rect class="p" x="120" y="118" width="90" height="60" rx="4"/>
+  <text class="t" x="165" y="152" text-anchor="middle">Relay 1</text>
+
+  <rect class="p" x="430" y="118" width="90" height="60" rx="4"/>
+  <text class="t" x="475" y="152" text-anchor="middle">Relay 2</text>
+
+  <line class="w" x1="150" y1="118" x2="150" y2="58"/>
+  <text class="ts" x="156" y="90">NO</text>
+  <line class="w" x1="150" y1="178" x2="150" y2="238"/>
+  <text class="ts" x="156" y="210">NC</text>
+  <line class="w" x1="210" y1="148" x2="288" y2="148"/>
+  <text class="ts" x="214" y="140">COM</text>
+  <circle class="node" cx="210" cy="148" r="3"/>
+
+  <line class="w" x1="490" y1="118" x2="490" y2="58"/>
+  <text class="ts" x="466" y="90" text-anchor="end">NO</text>
+  <line class="w" x1="490" y1="178" x2="490" y2="238"/>
+  <text class="ts" x="466" y="210" text-anchor="end">NC</text>
+  <line class="w" x1="430" y1="148" x2="352" y2="148"/>
+  <text class="ts" x="426" y="140" text-anchor="end">COM</text>
+  <circle class="node" cx="430" cy="148" r="3"/>
+
+  <circle class="p" cx="320" cy="148" r="30"/>
+  <text class="t" x="320" y="153" text-anchor="middle">M</text>
+  <text class="ts" x="288" y="176" text-anchor="end">A</text>
+  <text class="ts" x="352" y="176">B</text>
+
+  <path class="sig" marker-end="url(#s2)" d="M60 148 L116 148"/>
+  <text class="ts" x="58" y="140" text-anchor="end">D10</text>
+  <path class="sig" marker-end="url(#s2)" d="M580 148 L524 148"/>
+  <text class="ts" x="582" y="140">D9</text>
+
+  <text class="ts" x="90" y="292">Energise a coil and its COM contact flips from NC (ground) to NO (+12 V).</text>
+  <text class="ts" x="90" y="312">R1 on only: extend.   R2 on only: retract.   Both the same: stopped.</text>
+</svg>

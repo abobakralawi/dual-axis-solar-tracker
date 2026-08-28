@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 360" role="img" aria-label="Two views of the tracker's axes. Left, a top view: the panel and frame rotate about the vertical post to follow the sun from sunrise in the east to sunset in the west. This is the east-west azimuth axis. Right, a side view: the panel tilts on a horizontal pivot to match how high the sun sits above the horizon. This is the north-south elevation axis.">
+  <style>
+    text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+    .p{fill:#f6f8fa;stroke:#59636e;stroke-width:1.5}
+    .pan{fill:#dce4ee;stroke:#59636e;stroke-width:1.5}
+    .g{fill:none;stroke:#59636e;stroke-width:1.5;stroke-dasharray:5 4}
+    .ax{fill:none;stroke:#bc4c00;stroke-width:2.5}
+    .t{fill:#1f2328;font-size:13px}
+    .lab{fill:#1f2328;font-size:13px;font-weight:600}
+    .ts{fill:#59636e;font-size:11px}
+    .sun{fill:#f2cc60;stroke:#d29922;stroke-width:1}
+    .ray{stroke:#d29922;stroke-width:2;stroke-linecap:round}
+    .ah{fill:#bc4c00}
+    @media (prefers-color-scheme:dark){
+      .p{fill:#161b22;stroke:#7d8590}
+      .pan{fill:#21323f;stroke:#7d8590}
+      .g{stroke:#7d8590}
+      .ax{stroke:#e8873c}
+      .t{fill:#e6edf3}
+      .lab{fill:#e6edf3}
+      .ts{fill:#9198a1}
+      .sun{fill:#e3b341;stroke:#d29922}
+      .ray{stroke:#e3b341}
+      .ah{fill:#e8873c}
+    }
+  </style>
+  <defs>
+    <marker id="axh" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah"/></marker>
+    <symbol id="sun" viewBox="-16 -16 32 32">
+      <circle class="sun" cx="0" cy="0" r="8"/>
+      <g class="ray">
+        <line x1="0" y1="-11" x2="0" y2="-15"/>
+        <line x1="0" y1="11" x2="0" y2="15"/>
+        <line x1="-11" y1="0" x2="-15" y2="0"/>
+        <line x1="11" y1="0" x2="15" y2="0"/>
+        <line x1="-8" y1="-8" x2="-11" y2="-11"/>
+        <line x1="8" y1="8" x2="11" y2="11"/>
+        <line x1="8" y1="-8" x2="11" y2="-11"/>
+        <line x1="-8" y1="8" x2="-11" y2="11"/>
+      </g>
+    </symbol>
+  </defs>
+
+  <text class="lab" x="195" y="32" text-anchor="middle">Top view: E/W (azimuth)</text>
+  <circle class="g" cx="195" cy="180" r="105"/>
+  <g transform="rotate(-18 195 180)">
+    <rect class="pan" x="115" y="155" width="160" height="50" rx="3"/>
+    <line class="g" x1="195" y1="155" x2="195" y2="205"/>
+  </g>
+  <circle class="p" cx="195" cy="180" r="6"/>
+  <path class="ax" marker-start="url(#axh)" marker-end="url(#axh)" d="M106 124 A 105 105 0 0 1 284 124"/>
+  <text class="t" x="322" y="186">E</text>
+  <text class="ts" x="322" y="203">sunrise</text>
+  <text class="t" x="68" y="186" text-anchor="end">W</text>
+  <text class="ts" x="68" y="203" text-anchor="end">sunset</text>
+  <use href="#sun" x="308" y="104" width="32" height="32"/>
+  <use href="#sun" x="50" y="104" width="32" height="32"/>
+  <text class="ts" x="195" y="322" text-anchor="middle">The frame turns about the vertical post to follow</text>
+  <text class="ts" x="195" y="338" text-anchor="middle">the sun from sunrise to sunset.</text>
+
+  <line class="g" x1="410" y1="46" x2="410" y2="322"/>
+
+  <text class="lab" x="620" y="32" text-anchor="middle">Side view: N/S (elevation)</text>
+  <line class="p" x1="470" y1="248" x2="772" y2="248"/>
+  <rect class="p" x="600" y="150" width="16" height="98"/>
+  <g transform="rotate(-33 608 150)">
+    <rect class="pan" x="600" y="96" width="16" height="108" rx="3"/>
+  </g>
+  <circle class="p" cx="608" cy="150" r="6"/>
+  <path class="ax" marker-start="url(#axh)" marker-end="url(#axh)" d="M572 170 A 42 42 0 0 1 622 112"/>
+  <text class="ts" x="520" y="120" text-anchor="end">tilt</text>
+  <use href="#sun" x="722" y="189" width="32" height="32"/>
+  <text class="ts" x="738" y="228" text-anchor="middle">low sun</text>
+  <use href="#sun" x="674" y="62" width="32" height="32"/>
+  <text class="ts" x="690" y="52" text-anchor="middle">high sun</text>
+  <text class="ts" x="620" y="322" text-anchor="middle">The panel tilts on the horizontal pivot to match</text>
+  <text class="ts" x="620" y="338" text-anchor="middle">how high the sun sits in the sky.</text>
+</svg>

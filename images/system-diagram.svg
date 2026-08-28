@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" role="img" aria-label="System block diagram. The PV panel charges the 12 volt battery through the charge controller. The battery feeds the Arduino Uno through a 12 volt to 5 volt step-down, and feeds the 4-channel relay board at 12 volts. The Arduino reads four light sensors on analog pins A0 to A3 and switches the relay board on digital pins D7 to D10. The relay board switches 12 volts to the east-west and north-south linear actuators, reversing polarity to set direction.">
+  <style>
+    text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+    .p{fill:#f6f8fa;stroke:#59636e;stroke-width:1.5}
+    .t{fill:#1f2328;font-size:13px}
+    .ts{fill:#59636e;font-size:11px}
+    .sig{fill:none;stroke:#59636e;stroke-width:1.5;stroke-dasharray:5 4}
+    .pwr{fill:none;stroke:#bc4c00;stroke-width:2.5}
+    .ah{fill:#59636e}
+    .ahp{fill:#bc4c00}
+    @media (prefers-color-scheme:dark){
+      .p{fill:#161b22;stroke:#7d8590}
+      .t{fill:#e6edf3}
+      .ts{fill:#9198a1}
+      .sig{stroke:#7d8590}
+      .pwr{stroke:#e8873c}
+      .ah{fill:#7d8590}
+      .ahp{fill:#e8873c}
+    }
+  </style>
+  <defs>
+    <marker id="s" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah"/></marker>
+    <marker id="pw" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ahp"/></marker>
+  </defs>
+
+  <rect class="p" x="30" y="42" width="150" height="58" rx="4"/>
+  <text class="t" x="105" y="67" text-anchor="middle">4 light sensors</text>
+  <text class="ts" x="105" y="85" text-anchor="middle">east  west  south  north</text>
+
+  <rect class="p" x="300" y="34" width="170" height="74" rx="4"/>
+  <text class="t" x="385" y="75" text-anchor="middle">Arduino Uno</text>
+
+  <rect class="p" x="300" y="150" width="170" height="56" rx="4"/>
+  <text class="t" x="385" y="176" text-anchor="middle">Relay board</text>
+  <text class="ts" x="385" y="193" text-anchor="middle">4 channel</text>
+
+  <rect class="p" x="560" y="142" width="120" height="42" rx="4"/>
+  <text class="t" x="620" y="168" text-anchor="middle">E/W actuator</text>
+  <rect class="p" x="560" y="196" width="120" height="42" rx="4"/>
+  <text class="t" x="620" y="222" text-anchor="middle">N/S actuator</text>
+
+  <rect class="p" x="30" y="300" width="120" height="54" rx="4"/>
+  <text class="t" x="90" y="332" text-anchor="middle">PV panel</text>
+  <rect class="p" x="200" y="300" width="140" height="54" rx="4"/>
+  <text class="t" x="270" y="326" text-anchor="middle">Charge</text>
+  <text class="t" x="270" y="343" text-anchor="middle">controller</text>
+  <rect class="p" x="390" y="300" width="110" height="54" rx="4"/>
+  <text class="t" x="445" y="326" text-anchor="middle">12 V</text>
+  <text class="t" x="445" y="343" text-anchor="middle">battery</text>
+  <rect class="p" x="560" y="292" width="120" height="46" rx="4"/>
+  <text class="t" x="620" y="313" text-anchor="middle">12 V to 5 V</text>
+  <text class="ts" x="620" y="329" text-anchor="middle">step-down</text>
+
+  <path class="sig" marker-end="url(#s)" d="M180 71 L296 71"/>
+  <text class="ts" x="238" y="63" text-anchor="middle">A0 to A3</text>
+  <path class="sig" marker-end="url(#s)" d="M385 108 L385 146"/>
+  <text class="ts" x="396" y="133">D7 to D10</text>
+
+  <path class="pwr" marker-end="url(#pw)" d="M150 327 L196 327"/>
+  <path class="pwr" marker-end="url(#pw)" d="M340 327 L386 327"/>
+  <path class="pwr" marker-end="url(#pw)" d="M500 322 L556 314"/>
+  <path class="pwr" marker-end="url(#pw)" d="M680 305 L700 305 L700 52 L474 52"/>
+  <text class="ts" x="600" y="44" text-anchor="middle">5 V</text>
+  <path class="pwr" marker-end="url(#pw)" d="M445 300 L445 210"/>
+  <text class="ts" x="455" y="252">12 V</text>
+  <path class="pwr" marker-end="url(#pw)" d="M470 164 L556 162"/>
+  <path class="pwr" marker-end="url(#pw)" d="M470 192 L556 214"/>
+
+  <line class="pwr" x1="300" y1="380" x2="330" y2="380"/>
+  <text class="ts" x="337" y="384">power</text>
+  <line class="sig" x1="428" y1="380" x2="458" y2="380"/>
+  <text class="ts" x="465" y="384">control / sensor signal</text>
+</svg>
